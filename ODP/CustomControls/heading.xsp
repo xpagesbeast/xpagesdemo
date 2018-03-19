@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	styleClass="page-header">
+	<!-- Page Heading -->
+	<div class="row">
+		<div class="col-lg-12">
+			<xp:text escape="false" id="headingText" tagName="h1">
+				<xp:this.value><![CDATA[${compositeData.headingTitle} <small> #{compositeData.headingDescription} </small>]]></xp:this.value>
+			</xp:text>
+
+			<ol class="breadcrumb">
+				<li class="active">
+					<i class="fa fa-dashboard"></i>
+					<xp:text escape="true" value="${compositeData.pageName}" />
+				</li>
+			</ol>
+		</div>
+	</div>
+	<!-- /.row -->
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="alert alert-info alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert"
+					aria-hidden="true">x
+				</button>
+				<i class="fa fa-info-circle"></i>
+				<strong style="margin-left:3px;">Welcome!!</strong>
+				<xp:text style="font-size:1.5em;margin-left:5px;margin-right:5px;"
+					value="#{pageBean.time}">
+				</xp:text>
+				<span style="margin-left:3px;">Use the buttons below to try out the events.</span>
+				
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="alert alert-danger alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert"
+					aria-hidden="true">x
+				</button>
+				<i class="fa fa-info-circle"></i>
+				<xp:messages id="messages1" disableTheme="true"></xp:messages>
+			</div>
+		</div>
+	</div>
+	<!-- /.row -->
+</xp:view>
